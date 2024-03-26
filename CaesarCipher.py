@@ -5,7 +5,8 @@ def caesarCipher(message, offset):
     alphabet = 'abcdefghijklmnopqrstuvwxyz'
     encrypted_text = ''
     for char in message.lower():
-        if char == ' ':
+        # append non-alpha characters without modification
+        if not char.isalpha():
             encrypted_text += char
         else:
             index = alphabet.find(char)
