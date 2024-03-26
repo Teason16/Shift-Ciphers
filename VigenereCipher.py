@@ -4,8 +4,8 @@ def vigenereCipher(message, key, direction):
     alphabet = 'abcdefghijklmnopqrstuvwxyz'
 
     for char in message.lower():
-        # Append space to the message
-        if char == ' ':
+        # Append non-alpha characters to the message
+        if not char.isalpha():
             encrypted_text += char
         else:
             # Find the right key character to encode
